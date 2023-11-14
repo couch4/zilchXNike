@@ -8,11 +8,13 @@ import {
 // import { GUI } from "dat.gui";
 
 export default function setupLighting(scene: Scene) {
+  const mapSize = window.innerWidth > 700 ? 1024 : 512;
+
   const sun = new DirectionalLight(0xffffff, 2);
   sun.position.set(16, 100, 5);
   sun.castShadow = true; // Enable shadow casting
-  sun.shadow.mapSize.width = 512; // Set shadow map size
-  sun.shadow.mapSize.height = 512;
+  sun.shadow.mapSize.width = mapSize; // Set shadow map size
+  sun.shadow.mapSize.height = mapSize;
   sun.shadow.camera.near = 0.1; // Set shadow camera settings
   sun.shadow.camera.far = 200;
   sun.shadow.bias = -0.001;

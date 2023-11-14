@@ -10,7 +10,7 @@ export default function setupRenderer(element: HTMLDivElement) {
   const renderer = new WebGLRenderer({ antialias: true, alpha: true });
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = PCFSoftShadowMap;
-  renderer.setPixelRatio(window.devicePixelRatio);
+  // renderer.setPixelRatio(window.devicePixelRatio);
   element.appendChild(renderer.domElement);
 
   const startWidth = 1800;
