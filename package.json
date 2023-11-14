@@ -15,6 +15,7 @@
     "vitest": "^0.34.6"
   },
   "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
     "@types/dat.gui": "^0.7.12",
     "@types/three": "^0.158.2",
     "dat.gui": "^0.7.9",
