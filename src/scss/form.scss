@@ -1,0 +1,92 @@
+#sign-up {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.zilch-form {
+  background: white;
+  width: 100%;
+  max-width: 35rem;
+  height: 600px;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 50px;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-size: 28px;
+    line-height: 28px;
+    color: var(--main-font-color);
+    margin: 8px 0px 16px;
+  }
+
+  input {
+    display: flex;
+    gap: 16px;
+    flex-direction: row;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-color: rgb(242, 242, 242);
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 54px;
+    align-items: center;
+    padding: 8px 16px;
+    margin-bottom: 1rem;
+  }
+
+  .zilch-checkbox {
+    display: flex;
+
+    input {
+      display: none;
+    }
+    .checkmark {
+      position: relative;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: #222 solid 2px;
+      bottom: -0.2rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+
+    .zilch-terms {
+      font-size: 13px;
+      line-height: 18px;
+      margin: 0px 0px 4px;
+      text-align: center;
+      color: rgb(34, 34, 34);
+      font-weight: 200;
+      margin-bottom: 1rem;
+
+      a {
+        text-decoration: none;
+        color: var(--hover-color);
+      }
+    }
+
+    #signup-button {
+      display: flex;
+      min-height: 44px;
+      -webkit-box-pack: center;
+      justify-content: center;
+      align-items: center;
+      border-radius: 25px;
+      background-color: var(--primary-color);
+      padding-left: 16px;
+      padding-right: 16px;
+      border: none;
+      cursor: default;
+      width: 100%;
+      color: white;
+    }
+  }
+}

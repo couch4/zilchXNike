@@ -1,0 +1,42 @@
+{
+  "banner": { "title": "Zilch X<br/>Nike." },
+  "intro": {
+    "title": "To celebrate our<br/><span style='font-style: italic;'>pairing</span> with Nike",
+    "subtitle": "We're giving away 10 pairs of custom Zilch Airs!",
+    "copy": "The custom Zilch Nike sneakers are a one-of-a-kind design that features the Zilch logo and colors.<br/>They are made with the highest quality materials and construction, and they are sure to turn heads wherever you go.<br/><br/>To be in with a chance to win these kicks, sign up with Zilch below!"
+  },
+  "signup": {
+    "title": "Create your Zilch account and win!",
+    "form": [
+      {
+        "type": "email",
+        "name": "email",
+        "label": "Email"
+      },
+      {
+        "type": "text",
+        "name": "password",
+        "label": "Create Password"
+      },
+      {
+        "type": "checkbox",
+        "name": "competition",
+        "label": "I'd like to be entered in the Zilch x Nike competition."
+      },
+      {
+        "type": "checkbox",
+        "name": "email_check",
+        "label": "I've checked my email is correct."
+      },
+      {
+        "type": "checkbox",
+        "name": "password",
+        "label": "Keep me up to date with with the latest discounts & features."
+      }
+    ],
+    "formSubmitting": "Sending",
+    "formSuccess": "Thankyou for signing up!",
+    "formTerms": "By continuing you confirm you have read and accepted Zilch's <a href=''>Terms & Conditions</a> & <a href=''>Privacy Policy</a>",
+    "formCTA": "Create Account"
+  }
+}

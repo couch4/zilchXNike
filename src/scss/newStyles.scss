@@ -1,0 +1,225 @@
+:root {
+  html {
+    width: 100%;
+  }
+  --primary-color: #00d287;
+  --hover-color: #4f83f6;
+}
+
+$breakpoint-small: 480px;
+$breakpoint-medium: 960px;
+$breakpoint-medium2: 1143px;
+$breakpoint-large: 1260px;
+
+@mixin small {
+  @media (min-width: $breakpoint-small) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: $breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin medium2 {
+  @media (min-width: $breakpoint-medium2) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: $breakpoint-large) {
+    @content;
+  }
+}
+
+.zilch {
+  &-banner {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 100vw !important;
+    height: 21rem;
+    text-align: left;
+    padding: 0 2rem;
+
+    @include small {
+      height: 21rem;
+    }
+
+    @include medium {
+      height: 30rem;
+    }
+
+    @include medium2 {
+      height: 35rem;
+    }
+
+    @include large {
+      height: 40rem;
+    }
+
+    h1 {
+      line-height: 0.9;
+      display: block;
+      max-width: 100%;
+
+      @include medium {
+        margin-top: 4rem;
+      }
+
+      @include large {
+        max-width: 1200px;
+      }
+    }
+  }
+
+  &-intro {
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    background-color: #ffffff;
+
+    .holder-content {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    h2 {
+      color: var(--main-font-color);
+      width: 28rem;
+      line-height: 1;
+      margin-bottom: 6rem;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 1.8rem;
+        top: 3.9rem;
+        width: 14rem;
+        height: 33px;
+        background: var(--primary-color);
+
+        @include medium {
+          left: 1.8rem;
+          top: 6.8rem;
+          width: 25.5rem;
+          height: 41px;
+        }
+      }
+    }
+    h5 {
+      color: var(--primary-color);
+      font-weight: 800;
+    }
+  }
+
+  &-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    height: 100dvh;
+    width: 100%;
+    opacity: 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-image: url("images/nikeBG.jpg");
+      background-repeat: "no-repeat";
+      background-size: cover;
+      background-position: top right;
+      transition: opacity 1s 0.1s;
+    }
+
+    &.in-view {
+      opacity: 1;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    .holder-content {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+}
+
+#zilch-nike-promo {
+  padding-top: 25rem;
+
+  @include small {
+    padding-top: 26rem;
+  }
+
+  @include medium {
+    padding-top: 40rem;
+  }
+
+  @include large {
+    padding-top: 50rem;
+  }
+}
+
+#zilch-anim {
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+
+  canvas {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -47%);
+
+    @include small {
+      transform: translate(-50%, -47%);
+    }
+
+    @include medium {
+      transform: translate(-50%, -47%);
+    }
+
+    @include large {
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+#hover-area {
+  position: absolute;
+  z-index: 1;
+  width: 40rem;
+  height: 40rem;
+  left: 16%;
+  top: 10rem;
+  cursor: pointer;
+  pointer-events: auto;
+
+  @include small {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  @include medium {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  @include large {
+    width: 40rem;
+    height: 40rem;
+  }
+}

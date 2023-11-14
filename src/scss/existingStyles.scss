@@ -1,0 +1,312 @@
+:root {
+  --main-font: Circular;
+  --main-font-size: 16px;
+  --main-font-color: #222222;
+  --main-bg: #ffffff;
+  --titleH1-size: 50px;
+  --titleH1-size-mob: 28px;
+  --titleH1-color: #00d287;
+  --titleH2-size: 50px;
+  --titleH2-size-mob: 28px;
+  --titleH2-color: #00d287;
+  --titleH3-size: 22px;
+  --titleH3-size-mob: 20px;
+  --titleH3-color: #00d287;
+  --linck-color: #222222;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.zilch-pay {
+  .zilch-pay__row {
+    max-width: 90%;
+    margin: 0 auto 70px;
+
+    &:first-child .zilch-pay__desc {
+      margin-top: 50px;
+    }
+  }
+
+  .zilch-pay__desc {
+    max-width: 377px;
+  }
+
+  .zilch-pay__row .text-left {
+    text-align: left;
+  }
+}
+
+.h3-b {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+}
+
+.zilch-pay .zilch-pay__row figure img {
+  max-width: 90%;
+}
+
+.zilch-banner {
+  position: relative;
+  height: 515px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e6fbf3;
+
+  h1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    font-size: 110px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+
+    /* 54.545% */
+    max-width: 1200px;
+  }
+
+  img {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    max-height: 509px;
+    width: auto;
+  }
+
+  .subtext {
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: #222222;
+    margin: 0;
+    display: block;
+    margin-top: 15px;
+  }
+}
+
+.second-text-mobile {
+  display: none !important;
+}
+
+.zilch-feature {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: flex-start;
+  justify-content: center;
+  grid-gap: 19px;
+  padding: 0px 30px;
+
+  .zilch-feature__col {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    max-width: 400px;
+    padding: 0 !important;
+    margin: 0 !important;
+
+    figure img,
+    .zilch-feature-slider img {
+      width: 100%;
+      height: 100%;
+      max-width: 400px;
+      max-height: 400px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .slick-initialized .slick-slide img {
+      margin-bottom: 0;
+    }
+  }
+
+  .zilch-feature__desc {
+    max-width: 100%;
+  }
+
+  .slick-dots {
+    margin: 0 auto;
+    margin-top: -40px;
+    margin-bottom: 30px;
+    max-width: 90%;
+
+    li button {
+      background: #fff;
+    }
+  }
+}
+
+.zilch-image-text-wrapper {
+  text-align: left;
+
+  h2 {
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 15px;
+  }
+}
+
+.zilch-image-text-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 8px;
+  text-align: left;
+
+  h3 {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
+  }
+}
+
+@media screen and (max-width: 1142px) {
+  .zilch-banner h1 {
+    font-size: 70px;
+    line-height: 50px;
+    max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .zilch-image-text-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .zilch-image-text-wrapper h2 {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34px;
+    text-align: center;
+  }
+
+  .zilch-responsible__text-left {
+    text-align: center;
+  }
+
+  .zilch-feature {
+    grid-template-columns: 100%;
+    grid-gap: 46px;
+  }
+
+  .zilch-banner h1 {
+    flex-direction: column;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 62px;
+
+    /* 112.727% */
+    padding-top: 50px;
+  }
+
+  .second-text-desktop {
+    display: none !important;
+  }
+
+  .second-text-mobile {
+    display: block !important;
+    text-align: center;
+  }
+
+  .zilch-banner {
+    .subtext {
+      color: #222;
+      text-align: center;
+      font-size: 28px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 60px;
+
+      /* 214.286% */
+    }
+
+    height: auto;
+
+    img {
+      position: relative;
+      bottom: unset;
+      left: unset;
+      transform: unset;
+      margin: 0;
+      max-width: inherit;
+    }
+  }
+
+  .zilch-pay {
+    .zilch-pay__row {
+      &:first-child,
+      &:not(:last-child):nth-child(2) {
+        flex-direction: column-reverse !important;
+      }
+    }
+
+    .zilch-pay__desc {
+      margin: 50px 0 0;
+    }
+
+    .zilch-pay__row:last-child .zilch-pay__desc {
+      margin: 0px 0 50px;
+    }
+  }
+
+  .h3-b {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: -0.02em;
+  }
+
+  .zilch-pay {
+    .zilch-pay__col,
+    .zilch-pay__row {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .zilch-pay__list-logo {
+      img {
+        max-width: 65px;
+      }
+
+      li:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .zilch-banner img {
+    width: 100%;
+    max-height: none;
+  }
+
+  .zilch-pay {
+    margin: 0 -30px 50px;
+
+    .zilch-pay__list-logo {
+      justify-content: flex-start;
+    }
+  }
+}
