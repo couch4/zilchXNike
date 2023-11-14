@@ -140,8 +140,9 @@ export default function animateScene(
     });
 
     shoeScroll.to(camera.position, {
+      // x: (1500 / window.innerWidth) * 4,
       y: 0,
-      z: 10,
+      z: isDesktop ? 10 : 20,
       duration: 1,
     });
 

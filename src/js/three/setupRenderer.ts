@@ -6,9 +6,10 @@ import {
 } from "three";
 
 export default function setupRenderer(element: HTMLDivElement) {
+  const isDesktop = window.innerWidth > 700;
   const scene = new Scene();
   const renderer = new WebGLRenderer({ antialias: true, alpha: true });
-  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.enabled = isDesktop;
   renderer.shadowMap.type = PCFSoftShadowMap;
   // renderer.setPixelRatio(window.devicePixelRatio);
   element.appendChild(renderer.domElement);
