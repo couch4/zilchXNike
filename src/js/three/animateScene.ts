@@ -27,13 +27,16 @@ export default function animateScene(
   camera: Camera,
   renderer: WebGLRenderer
 ) {
+  const isDesktop = window.innerWidth > 700;
   const animScene = gltf.scene;
   scene.add(animScene);
   const mouse = new Vector2();
   const shoeHover = document.querySelector("#hover-area");
-  window.addEventListener("mousemove", mouseMove);
-  shoeHover?.addEventListener("mouseenter", () => handleBannerHover(true));
-  shoeHover?.addEventListener("mouseleave", () => handleBannerHover(false));
+  isDesktop ?? window.addEventListener("mousemove", mouseMove);
+  isDesktop ??
+    shoeHover?.addEventListener("mouseenter", () => handleBannerHover(true));
+  isDesktop ??
+    shoeHover?.addEventListener("mouseleave", () => handleBannerHover(false));
 
   // load ambient occlusion layer
   const textureLoader = new TextureLoader();
@@ -181,7 +184,7 @@ export default function animateScene(
     camera.lookAt(0, 0, 0);
 
     //floating card
-    if (card) {
+    if (card && isDesktop) {
       card.position.y = 2.5 + Math.sin(Date.now() * 0.0003) * 0.4;
       card.rotation.z = Math.sin(Date.now() * 0.0005) * 0.1;
       card.rotation.x = Math.PI * 0.5 + Math.sin(Date.now() * 0.0002) * 0.1;
