@@ -53,3 +53,4 @@ signupTL.to(form, {
 });
 
 animatePerWord(document.querySelector("#main-title")!);
+window.scrollTo(0, 0); // start at top of page
