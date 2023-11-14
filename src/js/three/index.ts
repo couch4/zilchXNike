@@ -3,13 +3,13 @@ import setupRenderer from "./setupRenderer";
 import setupLighting from "./setupLighting";
 import animateScene from "./animateScene";
 import { fetchModel } from "./loader";
-import { GUI } from "dat.gui";
+// import { GUI } from "dat.gui";
 import gsap from "gsap";
 
 export async function setupHero(element: HTMLDivElement) {
   const { camera, renderer, scene } = setupRenderer(element);
-  const gui = new GUI();
-  setupLighting(scene, gui);
+  // const gui = new GUI();
+  setupLighting(scene);
 
   // setup shadow catcher
   const planeGeom = new PlaneGeometry(100, 100);

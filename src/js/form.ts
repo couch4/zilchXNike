@@ -5,7 +5,7 @@ type FormField = {
 };
 
 function getFields(fields: FormField[]) {
-  const fieldsArray = fields.map((val: FormField, i: number) => {
+  const fieldsArray = fields.map((val: FormField) => {
     const { type, name, label } = val;
     if (type === "checkbox") {
       return `

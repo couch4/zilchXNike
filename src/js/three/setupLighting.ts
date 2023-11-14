@@ -5,9 +5,9 @@ import {
   SpotLight,
   //   SpotLightHelper,
 } from "three";
-import { GUI } from "dat.gui";
+// import { GUI } from "dat.gui";
 
-export default function setupLighting(scene: Scene, gui: GUI) {
+export default function setupLighting(scene: Scene) {
   const sun = new DirectionalLight(0xffffff, 2);
   sun.position.set(16, 100, 5);
   sun.castShadow = true; // Enable shadow casting
