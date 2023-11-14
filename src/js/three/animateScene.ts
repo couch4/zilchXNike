@@ -32,11 +32,11 @@ export default function animateScene(
   scene.add(animScene);
   const mouse = new Vector2();
   const shoeHover = document.querySelector("#hover-area");
-  isDesktop ?? window.addEventListener("mousemove", mouseMove);
-  isDesktop ??
+  if (isDesktop) {
+    window.addEventListener("mousemove", mouseMove);
     shoeHover?.addEventListener("mouseenter", () => handleBannerHover(true));
-  isDesktop ??
     shoeHover?.addEventListener("mouseleave", () => handleBannerHover(false));
+  }
 
   // load ambient occlusion layer
   const textureLoader = new TextureLoader();
