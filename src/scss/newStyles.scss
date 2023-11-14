@@ -1,6 +1,8 @@
 :root {
-  html {
+  html,
+  body {
     width: 100%;
+    overflow-x: hidden;
   }
   --primary-color: #00d287;
   --hover-color: #4f83f6;
@@ -159,6 +161,8 @@ $breakpoint-large: 1260px;
 
 #zilch-nike-promo {
   padding-top: 25rem;
+  width: 100dw;
+  position: relative;
 
   @include small {
     padding-top: 26rem;
