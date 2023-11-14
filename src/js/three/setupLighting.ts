@@ -11,8 +11,8 @@ export default function setupLighting(scene: Scene) {
   const sun = new DirectionalLight(0xffffff, 2);
   sun.position.set(16, 100, 5);
   sun.castShadow = true; // Enable shadow casting
-  sun.shadow.mapSize.width = 1024; // Set shadow map size
-  sun.shadow.mapSize.height = 1024;
+  sun.shadow.mapSize.width = 512; // Set shadow map size
+  sun.shadow.mapSize.height = 512;
   sun.shadow.camera.near = 0.1; // Set shadow camera settings
   sun.shadow.camera.far = 200;
   sun.shadow.bias = -0.001;
